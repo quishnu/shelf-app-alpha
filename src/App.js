@@ -92,14 +92,17 @@ function App() {
       backgroundColor: 'black', // black outer border
     }}>
       <img
-        src={results[0].cover_image}
-        alt={results[0].title}
-        style={{
-          width: '250px',
-          border: '8px solid yellow', // inner yellow border
-          display: 'block'
-        }}
-      />
+  src={results[0].cover_image}
+  alt={results[0].title}
+  style={{
+    width: '250px',
+    padding: '8px',
+    backgroundColor: 'yellow',
+    boxShadow: '0 0 0 2px black, 0 0 0 10px yellow, 0 0 0 2px black',
+    marginBottom: '20px'
+  }}
+/>
+
     </div>
     <div style={{ fontWeight: 'bold', marginTop: '16px' }}>{results[0].title}</div>
     <div style={{ color: '#666' }}>{results[0].year} • {results[0].country}</div>
