@@ -29,20 +29,51 @@ function App() {
 
       {/* Search Bar */}
 <div style={{ marginTop: '80px', position: 'relative', display: 'inline-block' }}>
-  <input
-    type="text"
-    placeholder="add records to your shelf."
-    value={query}
-    onChange={(e) => setQuery(e.target.value)}
-    onKeyDown={handleKeyDown}
+<div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+  <div
     style={{
-      padding: '16px 40px 16px 16px',
-      fontSize: '14px',
-      width: '400px',
+      fontSize: '18px',
       fontFamily: "'IBM Plex Mono', monospace",
-      border: '1px solid #999',
+      color: '#555',
+      marginBottom: '8px',
     }}
-  />
+  >
+    add records to your{' '}
+    <span style={{ fontFamily: 'ShelfFont', fontSize: '23px', fontStyle: 'italic' }}>
+      shelf.
+    </span>
+  </div>
+
+  <div style={{ display: 'flex', alignItems: 'center' }}>
+    <input
+      type="text"
+      value={query}
+      onChange={(e) => setQuery(e.target.value)}
+      onKeyDown={handleKeyDown}
+      style={{
+        padding: '16px',
+        fontSize: '18px',
+        width: '400px',
+        fontFamily: "'IBM Plex Mono', monospace",
+        border: '1px solid #999',
+      }}
+    />
+    <img
+      src="/search-icon.png"
+      alt="search"
+      onClick={handleSearch}
+      style={{
+        width: '20px',
+        height: '20px',
+        marginLeft: '8px',
+        cursor: 'pointer',
+        transform: 'scaleX(-1)',
+        opacity: 0.5,
+      }}
+    />
+  </div>
+</div>
+
   <img
     src="/search-icon-2048x2048-cmujl7en.png"
     alt="Search"
