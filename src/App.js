@@ -49,7 +49,7 @@ function App() {
     onClick={handleSearch}
     style={{
       position: 'absolute',
-      right: '20px',
+      right: '40px',
       top: '50%',
       transform: 'translateY(-50%) scaleX(-1)',
       width: '12.75px',
