@@ -62,7 +62,7 @@ function App() {
               }}
             >
               <span>add records to your&nbsp;</span>
-              <span style={{ fontFamily: 'ShelfFont', fontStyle: 'italic', fontSize: '18px', color: '#000' }}>shelf.</span>
+              <span style={{ fontFamily: 'ShelfFont', fontStyle: 'italic', fontSize: '18px', color: '#333' }}>shelf.</span>
             </div>
           )}
           <img
