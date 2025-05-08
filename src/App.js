@@ -36,10 +36,10 @@ function App() {
             onKeyDown={handleKeyDown}
             style={{
               padding: '16px',
-              fontSize: '18px',
-              width: '400px',
+              fontSize: '16px',
+              width: '600px',
               fontFamily: "'IBM Plex Mono', monospace",
-              border: '1px solid #999',
+              border: '1px solid #888',
               position: 'relative',
               zIndex: 2,
               background: 'transparent',
