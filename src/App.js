@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 function App() {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState([]);
-  
+
   const handleSearch = async () => {
     const res = await fetch(
       `https://api.discogs.com/database/search?q=${query}&type=release&token=vyocBCvdhzngEvJrcrzxskfvAOSZZJYIoXpQGqhT`
@@ -26,59 +26,48 @@ function App() {
   return (
     <div style={{ padding: '40px', fontFamily: "'IBM Plex Mono', monospace", textAlign: 'center' }}>
       
+      {/* Header */}
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <span style={{ fontFamily: 'ShelfFont', fontSize: '23px', fontStyle: 'italic' }}>shelf.</span>
+        <div style={{ width: '24px', height: '24px', borderRadius: '50%', border: '1px solid black' }} />
+      </div>
 
       {/* Search Bar */}
-<div style={{ marginTop: '80px', position: 'relative', display: 'inline-block' }}>
-<div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-  <div
-    style={{
-      fontSize: '18px',
-      fontFamily: "'IBM Plex Mono', monospace",
-      color: '#555',
-      marginBottom: '8px',
-    }}
-  >
-    add records to your{' '}
-    <span style={{ fontFamily: 'ShelfFont', fontSize: '23px', fontStyle: 'italic' }}>
-      shelf.
-    </span>
-  </div>
-
-  <div style={{ display: 'flex', alignItems: 'center' }}>
-    <input
-      type="text"
-      value={query}
-      onChange={(e) => setQuery(e.target.value)}
-      onKeyDown={handleKeyDown}
-      style={{
-        padding: '16px',
-        fontSize: '18px',
-        width: '400px',
-        fontFamily: "'IBM Plex Mono', monospace",
-        border: '1px solid #999',
-      }}
-    />
-  
-  </div>
-</div>
-
- <img
-  src="/search-icon-2048x2048-cmujl7en.png"
-  alt="Search"
-  onClick={handleSearch}
-  style={{
-    position: 'absolute',
-    right: '30px',
-    top: '50%',
-    transform: 'translateY(-50%) scaleX(-1)',
-    width: '14px',
-    opacity: 0.5,
-    cursor: 'pointer'
-  }}
-/>
-
-</div>
-
+      <div style={{ marginTop: '80px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <div style={{ marginBottom: '12px', fontSize: '16px' }}>
+          add records to your <span style={{ fontFamily: 'ShelfFont', fontStyle: 'italic', fontSize: '18px' }}>shelf.</span>
+        </div>
+        <div style={{ position: 'relative', display: 'inline-block' }}>
+          <input
+            type="text"
+            placeholder=""
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            onKeyDown={handleKeyDown}
+            style={{
+              padding: '16px',
+              fontSize: '18px',
+              width: '400px',
+              fontFamily: "'IBM Plex Mono', monospace",
+              border: '1px solid #999',
+            }}
+          />
+          <img
+            src="/search-icon-2048x2048-cmujl7en.png"
+            alt="Search"
+            onClick={handleSearch}
+            style={{
+              position: 'absolute',
+              right: '16px',
+              top: '50%',
+              transform: 'translateY(-50%) scaleX(-1)',
+              width: '14px',
+              opacity: 0.5,
+              cursor: 'pointer'
+            }}
+          />
+        </div>
+      </div>
 
       {/* Result */}
       {results.length > 0 && (
@@ -101,3 +90,4 @@ function App() {
 }
 
 export default App;
+
