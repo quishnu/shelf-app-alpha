@@ -54,7 +54,7 @@ function App() {
                 transform: 'translateY(-50%)',
                 fontSize: '18px',
                 fontFamily: "'IBM Plex Mono', monospace",
-                color: '#888',
+                color: '#000',
                 pointerEvents: 'none',
                 zIndex: 1,
                 display: 'flex',
@@ -74,7 +74,7 @@ function App() {
               right: '16px',
               top: '50%',
               transform: 'translateY(-50%) scaleX(-1)',
-              width: '14px',
+              width: '10px',
               opacity: 0.5,
               cursor: 'pointer',
               zIndex: 2
