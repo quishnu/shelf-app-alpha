@@ -26,11 +26,7 @@ function App() {
   return (
     <div style={{ padding: '40px', fontFamily: "'IBM Plex Mono', monospace", textAlign: 'center' }}>
       
-      {/* Header */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <span style={{ fontFamily: 'ShelfFont', fontSize: '23px', fontStyle: 'italic' }}>shelf.</span>
-        <div style={{ width: '24px', height: '24px', borderRadius: '50%', border: '1px solid black' }} />
-      </div>
+  
 
       {/* Search Bar */}
       <div style={{ marginTop: '80px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
