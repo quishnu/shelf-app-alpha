@@ -57,8 +57,8 @@ function App() {
       right: '12px',
       top: '50%',
       transform: 'translateY(-50%) scaleX(-1)',
-      width: '18px',
-      height: '18px',
+      width: '12.75px',
+      height: '12.75px',
       opacity: 0.5,
       cursor: 'pointer',
     }}
