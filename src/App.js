@@ -36,7 +36,7 @@ function App() {
       <div style={{ marginTop: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <input
           type="text"
-          placeholder="add records to your shelf."
+          placeholder="add records to your snelf."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onKeyDown={handleKeyDown}
