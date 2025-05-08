@@ -30,40 +30,61 @@ function App() {
 
       {/* Search Bar */}
       <div style={{ marginTop: '80px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <div style={{ marginBottom: '12px', fontSize: '16px' }}>
-          add records to your <span style={{ fontFamily: 'ShelfFont', fontStyle: 'italic', fontSize: '18px' }}>shelf.</span>
-        </div>
-        <div style={{ position: 'relative', display: 'inline-block' }}>
-          <input
-            type="text"
-            placeholder=""
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            onKeyDown={handleKeyDown}
-            style={{
-              padding: '16px',
-              fontSize: '18px',
-              width: '400px',
-              fontFamily: "'IBM Plex Mono', monospace",
-              border: '1px solid #999',
-            }}
-          />
-          <img
-            src="/search-icon-2048x2048-cmujl7en.png"
-            alt="Search"
-            onClick={handleSearch}
-            style={{
-              position: 'absolute',
-              right: '16px',
-              top: '50%',
-              transform: 'translateY(-50%) scaleX(-1)',
-              width: '14px',
-              opacity: 0.5,
-              cursor: 'pointer'
-            }}
-          />
-        </div>
-      </div>
+       
+       <div style={{ position: 'relative', display: 'inline-block' }}>
+  <input
+    type="text"
+    value={query}
+    onChange={(e) => setQuery(e.target.value)}
+    onKeyDown={handleKeyDown}
+    style={{
+      padding: '16px',
+      fontSize: '18px',
+      width: '400px',
+      fontFamily: "'IBM Plex Mono', monospace",
+      border: '1px solid #999',
+      position: 'relative',
+      zIndex: 2,
+      background: 'transparent',
+    }}
+  />
+  {query === '' && (
+    <div
+      style={{
+        position: 'absolute',
+        left: '16px',
+        top: '50%',
+        transform: 'translateY(-50%)',
+        fontSize: '18px',
+        fontFamily: "'IBM Plex Mono', monospace",
+        color: '#888',
+        pointerEvents: 'none',
+        zIndex: 1,
+        display: 'flex',
+        alignItems: 'center',
+      }}
+    >
+      <span>add records to your&nbsp;</span>
+      <span style={{ fontFamily: 'ShelfFont', fontStyle: 'italic', fontSize: '18px' }}>shelf.</span>
+    </div>
+  )}
+  <img
+    src="/search-icon-2048x2048-cmujl7en.png"
+    alt="Search"
+    onClick={handleSearch}
+    style={{
+      position: 'absolute',
+      right: '16px',
+      top: '50%',
+      transform: 'translateY(-50%) scaleX(-1)',
+      width: '14px',
+      opacity: 0.5,
+      cursor: 'pointer',
+      zIndex: 2
+    }}
+  />
+</div>
+
 
       {/* Result */}
       {results.length > 0 && (
