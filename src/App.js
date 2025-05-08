@@ -83,22 +83,32 @@ function App() {
         </div>
       </div>
 
-      {/* Result */}
-      {results.length > 0 && (
-        <div style={{ marginTop: '60px' }}>
-          <img
-            src={results[0].cover_image}
-            alt={results[0].title}
-            style={{ width: '250px', border: '8px solid yellow', marginBottom: '20px' }}
-          />
-          <div style={{ fontWeight: 'bold' }}>{results[0].title}</div>
-          <div style={{ color: '#666' }}>{results[0].year} • {results[0].country}</div>
-          <div style={{ marginTop: '12px' }}>
-            <a href="#" style={{ marginRight: '24px', fontSize: '12px' }}>add to your shelf</a>
-            <a href="#" style={{ fontSize: '12px' }}>add to wishlist</a>
-          </div>
-        </div>
-      )}
+{/* Result */}
+{results.length > 0 && (
+  <div style={{ marginTop: '60px' }}>
+    <div style={{
+      display: 'inline-block',
+      padding: '8px',
+      backgroundColor: 'black', // black outer border
+    }}>
+      <img
+        src={results[0].cover_image}
+        alt={results[0].title}
+        style={{
+          width: '250px',
+          border: '8px solid yellow', // inner yellow border
+          display: 'block'
+        }}
+      />
+    </div>
+    <div style={{ fontWeight: 'bold', marginTop: '16px' }}>{results[0].title}</div>
+    <div style={{ color: '#666' }}>{results[0].year} • {results[0].country}</div>
+    <div style={{ marginTop: '12px' }}>
+      <a href="#" style={{ marginRight: '24px', fontSize: '12px' }}>add to your shelf</a>
+      <a href="#" style={{ fontSize: '12px' }}>add to wishlist</a>
+    </div>
+  </div>
+)}
     </div>
   );
 }
