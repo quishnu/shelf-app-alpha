@@ -98,10 +98,11 @@ function App() {
     width: '250px',
     padding: '8px',
     backgroundColor: 'yellow',
-    boxShadow: '0 0 0 2px black, 0 0 0 10px yellow, 0 0 0 2px black',
+    boxShadow: '0 0 0 2px black, 0 0 0 8px yellow, 0 0 0 10px black',
     marginBottom: '20px'
   }}
 />
+
 
     </div>
     <div style={{ fontWeight: 'bold', marginTop: '16px' }}>{results[0].title}</div>
