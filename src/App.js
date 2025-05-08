@@ -36,12 +36,12 @@ function App() {
       <div style={{ marginTop: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <input
           type="text"
-          placeholder="add records to your snelf."
+          placeholder="add records to your shelf."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onKeyDown={handleKeyDown}
           style={{
-            padding: '16px',
+            padding: '10px',
             fontSize: '18px',
             width: '400px',
             fontFamily: "'IBM Plex Mono', monospace",
@@ -62,7 +62,7 @@ function App() {
           <div style={{ fontWeight: 'bold' }}>{results[0].title}</div>
           <div style={{ color: '#666' }}>{results[0].year} • {results[0].country}</div>
           <div style={{ marginTop: '12px' }}>
-            <a href="#" style={{ marginRight: '24px', fontSize: '12px' }}>add to your snelf</a>
+            <a href="#" style={{ marginRight: '24px', fontSize: '12px' }}>add to your shelf</a>
             <a href="#" style={{ fontSize: '12px' }}>add to wishlist</a>
           </div>
         </div>
