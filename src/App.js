@@ -52,9 +52,9 @@ function App() {
                 left: '16px',
                 top: '50%',
                 transform: 'translateY(-50%)',
-                fontSize: '18px',
+                fontSize: '16px',
                 fontFamily: "'IBM Plex Mono', monospace",
-                color: '#000',
+                color: '#888',
                 pointerEvents: 'none',
                 zIndex: 1,
                 display: 'flex',
@@ -62,7 +62,7 @@ function App() {
               }}
             >
               <span>add records to your&nbsp;</span>
-              <span style={{ fontFamily: 'ShelfFont', fontStyle: 'italic', fontSize: '18px' }}>shelf.</span>
+              <span style={{ fontFamily: 'ShelfFont', fontStyle: 'italic', fontSize: '18px', color: '#000' }}>shelf.</span>
             </div>
           )}
           <img
