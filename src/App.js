@@ -58,37 +58,25 @@ function App() {
         border: '1px solid #999',
       }}
     />
-    <img
-      src="/search-icon.png"
-      alt="search"
-      onClick={handleSearch}
-      style={{
-        width: '20px',
-        height: '20px',
-        marginLeft: '8px',
-        cursor: 'pointer',
-        transform: 'scaleX(-1)',
-        opacity: 0.5,
-      }}
-    />
+  
   </div>
 </div>
 
-  <img
-    src="/search-icon-2048x2048-cmujl7en.png"
-    alt="Search"
-    onClick={handleSearch}
-    style={{
-      position: 'absolute',
-      right: '30px',
-      top: '50%',
-      transform: 'translateY(-50%) scaleX(-1)',
-      width: '12.75px',
-      height: '12.75px',
-      opacity: 0.5,
-      cursor: 'pointer',
-    }}
-  />
+ <img
+  src="/search-icon-2048x2048-cmujl7en.png"
+  alt="Search"
+  onClick={handleSearch}
+  style={{
+    position: 'absolute',
+    right: '30px',
+    top: '50%',
+    transform: 'translateY(-50%) scaleX(-1)',
+    width: '14px',
+    opacity: 0.5,
+    cursor: 'pointer'
+  }}
+/>
+
 </div>
 
 
