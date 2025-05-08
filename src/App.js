@@ -87,24 +87,28 @@ function App() {
 {results.length > 0 && (
   <div style={{ marginTop: '60px' }}>
     <div style={{
-      display: 'inline-block',
-      padding: '8px',
-      backgroundColor: 'black', // black outer border
+  display: 'inline-block',
+  padding: '2px', // outer black stroke
+  backgroundColor: 'black',
+  marginBottom: '20px'
+}}>
+  <div style={{
+    padding: '8px', // yellow stroke
+    backgroundColor: 'yellow',
+  }}>
+    <div style={{
+      padding: '2px', // inner black stroke
+      backgroundColor: 'black',
     }}>
       <img
-  src={results[0].cover_image}
-  alt={results[0].title}
-  style={{
-    width: '250px',
-    padding: '8px',
-    backgroundColor: 'yellow',
-    boxShadow: '0 0 0 2px black, 0 0 0 8px yellow, 0 0 0 2px black',
-    marginBottom: '20px'
-  }}
-/>
-
-
+        src={results[0].cover_image}
+        alt={results[0].title}
+        style={{ display: 'block', width: '250px', height: 'auto' }}
+      />
     </div>
+  </div>
+</div>
+
     <div style={{ fontWeight: 'bold', marginTop: '16px' }}>{results[0].title}</div>
     <div style={{ color: '#666' }}>{results[0].year} • {results[0].country}</div>
     <div style={{ marginTop: '12px' }}>
